@@ -1,5 +1,12 @@
 <script>
     import Keypad from "../lib/components/Keypad.svelte";
+    import { onMount } from "svelte";
+
+    onMount(() => {
+        if(!window.location.href.includes("scientific-calculator.natalius.cc")) {
+            window.location.href = "https://scientific-calculator.natalius.cc";
+        }
+    })
 
     const keypadConfig = [
         ['x<sup>y</sup>','π','e','C','+'],
@@ -95,5 +102,5 @@
             </div>
         {/each}
     </div>
-    <a style="font-family: 'Inter Tight', sans-serif;" class="cursor-pointer text-slate-800 opacity-75 hover:opacity-100 duration-100 mx-auto text-center mt-3" href="https://github.com/Natalius-dev" target="_blank">Made by Natalius &#10084;</a>
+    <a style="font-family: 'Inter Tight', sans-serif;" class="cursor-pointer text-slate-800 opacity-75 hover:opacity-100 duration-100 mx-auto text-center mt-3" href="https://github.com/Natalius-dev" target="_blank">Made with &#10084; by Natalius</a>
 </div>
