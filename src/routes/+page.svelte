@@ -2,12 +2,6 @@
     import Keypad from "../lib/components/Keypad.svelte";
     import { onMount } from "svelte";
 
-    onMount(() => {
-        if(!window.location.href.includes("scientific-calculator.natalius.cc")) {
-            window.location.href = "https://scientific-calculator.natalius.cc";
-        }
-    })
-
     const keypadConfig = [
         ['x<sup>y</sup>','π','e','C','+'],
         ['√x','7','8','9','-'],
